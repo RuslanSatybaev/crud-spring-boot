@@ -19,8 +19,7 @@ public class CarServiceImpl implements CarService {
         return IntStream.range(0, count).mapToObj(createCars()::get).collect(Collectors.toList());
     }
 
-    @Override
-    public List<Car> createCars() {
+    private List<Car> createCars() {
         List<Car> cars = new ArrayList<>();
         cars.add(new Car("mers", 101, 2.3));
         cars.add(new Car("bmw", 1010, 3.3));
