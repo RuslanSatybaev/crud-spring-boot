@@ -22,8 +22,7 @@ public class UserController {
 
     @GetMapping
     public String showAllUsers(Model model) {
-        List<User> users = userService.getAllUsers();
-        model.addAttribute("users", users);
+        model.addAttribute("users", userService.getAllUsers());
         return "users";
     }
 
@@ -45,7 +44,7 @@ public class UserController {
         return "edit";
     }
 
-    @PostMapping("/updateUser")
+    @PatchMapping("/updateUser")
     public String updateUser(@ModelAttribute("newUser") User user, @RequestParam("id") int id) {
         userService.updateUser(id, user);
         return "redirect:/users";

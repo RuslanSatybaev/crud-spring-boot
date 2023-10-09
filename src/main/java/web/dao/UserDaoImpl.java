@@ -7,11 +7,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
-import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
-@Transactional
 public class UserDaoImpl implements UserDao {
 
     @PersistenceContext
@@ -39,10 +37,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void updateUser(int id, User user) {
-
-
         User userUpdated = getUser(id);
-
         userUpdated.setName(user.getName());
         userUpdated.setAge(user.getAge());
 
