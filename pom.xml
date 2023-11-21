@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.kata</groupId>
-    <artifactId>crud-spring-boot</artifactId>
+    <artifactId>crud-spring-boot-3-1-2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>war</packaging>
@@ -63,7 +63,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>crud-spring-boot</finalName>
+        <finalName>crud-spring-boot-3-1-2</finalName>
     </build>
 
 </project>
